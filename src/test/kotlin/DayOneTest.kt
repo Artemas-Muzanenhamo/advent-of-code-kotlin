@@ -7,8 +7,8 @@ internal class DayOneTest {
 
     @Test
     fun `Should return measurements larger than previous`() {
-//        val fileContent = javaClass.getResource("day1-input.txt")!!.readText().lines().map { it.toInt() }
-//        val solution = dayOne.solution(fileContent)
+//        val input = javaClass.getResource("day1-input.txt")!!.readText().lines().map { it.toInt() }
+//        val solution = dayOne.solution(input)
         val solution = dayOne.solution(input)
 
         assertThat(solution).isEqualTo(7)
