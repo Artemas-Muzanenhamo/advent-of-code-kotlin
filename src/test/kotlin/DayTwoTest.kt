@@ -3,12 +3,14 @@ import org.junit.jupiter.api.Test
 
 class DayTwoTest {
     private val dayTwo = DayTwo()
-    private val testInput: List<Pair<String, Int>> = listOf(Pair("forward", 5),Pair("down", 5),Pair("forward", 8),Pair("up", 3),Pair("down", 8),Pair("forward", 2))
-    
+
+    private val testInput = javaClass.getResource("day2-input.txt")!!.readText().lines()
+        .map { Pair(it.substringBefore(' ').trim(), it.substringAfter(' ').trim().toInt()) }
+
     @Test
     fun `Should return product of horizontal total + depth total`() {
         val diveSolution = dayTwo.diveSolution(testInput)
 
-        assertThat(diveSolution).isEqualTo(150)
+        assertThat(diveSolution).isEqualTo(2215080)
     }
 }
